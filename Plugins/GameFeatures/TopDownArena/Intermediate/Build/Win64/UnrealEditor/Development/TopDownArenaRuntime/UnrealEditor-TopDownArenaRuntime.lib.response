@@ -8,6 +8,5 @@
 /NODEFAULTLIB
 "C:\Users\musta\Desktop\LyraSample\Intermediate\Build\Win64\LyraEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\TopDownArena\Intermediate\Build\Win64\UnrealEditor\Development\TopDownArenaRuntime\Module.TopDownArenaRuntime.cpp.obj"
-"C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\TopDownArena\Intermediate\Build\Win64\UnrealEditor\Development\TopDownArenaRuntime\TopDownArenaRuntime.init.gen.cpp.obj"
 "C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\TopDownArena\Intermediate\Build\Win64\UnrealEditor\Development\TopDownArenaRuntime\Default.rc2.res"
 /OUT:"C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\TopDownArena\Intermediate\Build\Win64\UnrealEditor\Development\TopDownArenaRuntime\UnrealEditor-TopDownArenaRuntime.lib"

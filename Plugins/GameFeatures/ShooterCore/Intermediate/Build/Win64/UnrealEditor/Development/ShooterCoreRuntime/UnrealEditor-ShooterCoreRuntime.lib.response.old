@@ -8,5 +8,8 @@
 /NODEFAULTLIB
 "C:\Users\musta\Desktop\LyraSample\Intermediate\Build\Win64\LyraEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\ShooterCore\Intermediate\Build\Win64\UnrealEditor\Development\ShooterCoreRuntime\Module.ShooterCoreRuntime.cpp.obj"
+"C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\ShooterCore\Intermediate\Build\Win64\UnrealEditor\Development\ShooterCoreRuntime\ControlPointStatusMessage.gen.cpp.obj"
+"C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\ShooterCore\Intermediate\Build\Win64\UnrealEditor\Development\ShooterCoreRuntime\IAimAssistTargetInterface.gen.cpp.obj"
+"C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\ShooterCore\Intermediate\Build\Win64\UnrealEditor\Development\ShooterCoreRuntime\ShooterCoreRuntime.init.gen.cpp.obj"
 "C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\ShooterCore\Intermediate\Build\Win64\UnrealEditor\Development\ShooterCoreRuntime\Default.rc2.res"
 /OUT:"C:\Users\musta\Desktop\LyraSample\Plugins\GameFeatures\ShooterCore\Intermediate\Build\Win64\UnrealEditor\Development\ShooterCoreRuntime\UnrealEditor-ShooterCoreRuntime.lib"

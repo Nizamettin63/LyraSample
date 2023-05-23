@@ -124,8 +124,21 @@ void ULyraDamageExecution::Execute_Implementation(const FGameplayEffectCustomExe
 	}
 	DistanceAttenuation = FMath::Max(DistanceAttenuation, 0.0f);
 
+
+	float DefeceStateMultiplier = 1;
+
+	if (TargetTags)
+	{
+		if (TargetTags->HasTagExact(FGameplayTag::RequestGameplayTag(FName("Status.Defencing"))))
+		{
+			DefeceStateMultiplier = 0.5f;
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Defence worked")));
+		}
+	}
+
 	// Clamping is done when damage is converted to -health
-	const float DamageDone = FMath::Max(BaseDamage * DistanceAttenuation * PhysicalMaterialAttenuation * DamageInteractionAllowedMultiplier, 0.0f);
+	const float DamageDone = FMath::Max(BaseDamage * DistanceAttenuation * PhysicalMaterialAttenuation * DamageInteractionAllowedMultiplier * DefeceStateMultiplier, 0.0f);
 
 	if (DamageDone > 0.0f)
 	{
