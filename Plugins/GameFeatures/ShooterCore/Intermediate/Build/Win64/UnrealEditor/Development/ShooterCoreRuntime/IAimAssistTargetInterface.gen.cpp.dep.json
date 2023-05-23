@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\musta\\desktop\\lyrasample\\plugins\\gamefeatures\\shootercore\\intermediate\\build\\win64\\unrealeditor\\inc\\shootercoreruntime\\uht\\iaimassisttargetinterface.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\musta\\desktop\\lyrasample\\intermediate\\build\\win64\\lyraeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\musta\\desktop\\lyrasample\\plugins\\gamefeatures\\shootercore\\intermediate\\build\\win64\\unrealeditor\\development\\shootercoreruntime\\definitions.shootercoreruntime.h",
+            "c:\\users\\musta\\desktop\\lyrasample\\plugins\\gamefeatures\\shootercore\\source\\shootercoreruntime\\public\\input\\iaimassisttargetinterface.h",
+            "c:\\users\\musta\\desktop\\lyrasample\\plugins\\gamefeatures\\shootercore\\source\\shootercoreruntime\\public\\input\\aimassistinputmodifier.h",
+            "d:\\ue_5.1\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmodifiers.h",
+            "d:\\ue_5.1\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "d:\\ue_5.1\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "d:\\ue_5.1\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmodifiers.generated.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "d:\\ue_5.1\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\scalablefloat.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\engine\\curvetable.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\curvetable.generated.h",
+            "d:\\ue_5.1\\engine\\plugins\\runtime\\dataregistry\\source\\dataregistry\\public\\dataregistryid.h",
+            "d:\\ue_5.1\\engine\\plugins\\runtime\\dataregistry\\intermediate\\build\\win64\\unrealeditor\\inc\\dataregistry\\uht\\dataregistryid.generated.h",
+            "d:\\ue_5.1\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\scalablefloat.generated.h",
+            "c:\\users\\musta\\desktop\\lyrasample\\source\\lyragame\\input\\lyrainputmodifiers.h",
+            "c:\\users\\musta\\desktop\\lyrasample\\intermediate\\build\\win64\\unrealeditor\\inc\\lyragame\\uht\\lyrainputmodifiers.generated.h",
+            "c:\\users\\musta\\desktop\\lyrasample\\plugins\\gamefeatures\\shootercore\\intermediate\\build\\win64\\unrealeditor\\inc\\shootercoreruntime\\uht\\aimassistinputmodifier.generated.h",
+            "c:\\users\\musta\\desktop\\lyrasample\\plugins\\gamefeatures\\shootercore\\intermediate\\build\\win64\\unrealeditor\\inc\\shootercoreruntime\\uht\\iaimassisttargetinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
