@@ -26,6 +26,7 @@ class UInputComponent;
 class ULyraAbilitySystemComponent;
 class ULyraCameraComponent;
 class ULyraHealthComponent;
+class UItemDropComponent;
 class ULyraPawnExtensionComponent;
 class UObject;
 struct FFrame;
@@ -152,6 +153,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraHealthComponent> HealthComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<ULyraHealthComponent> ItemDropComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraCameraComponent> CameraComponent;

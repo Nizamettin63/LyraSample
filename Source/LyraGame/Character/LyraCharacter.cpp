@@ -222,6 +222,8 @@ void ALyraCharacter::OnAbilitySystemInitialized()
 
 	HealthComponent->InitializeWithAbilitySystem(LyraASC);
 
+	ItemDropComponent->InitializeWithAbilitySystem(LyraASC);
+	
 	InitializeGameplayTags();
 }
 
