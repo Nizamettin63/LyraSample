@@ -132,8 +132,6 @@ void ULyraDamageExecution::Execute_Implementation(const FGameplayEffectCustomExe
 		if (TargetTags->HasTagExact(FGameplayTag::RequestGameplayTag(FName("Status.Defencing"))))
 		{
 			DefeceStateMultiplier = 0.5f;
-
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Defence worked")));
 		}
 	}
 
