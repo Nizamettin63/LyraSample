@@ -10,8 +10,6 @@
 #include "AbilitySystem/Attributes/LyraCurrencySet.h"
 
 
-
-
 UItemDropComponent::UItemDropComponent(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
 {
@@ -27,13 +25,12 @@ void UItemDropComponent::InitializeWithAbilitySystem(ULyraAbilitySystemComponent
 	{
 		LyraAbilitySystemComponent = ASC;
 	}
-	
-
-	LyraCharacter = Cast<ALyraCharacter>(GetOwner());
 
 	HealthComponent = GetOwner()->FindComponentByClass<ULyraHealthComponent>();
-
-	HealthComponent->OnDeathStarted.AddDynamic(this, &ThisClass::OwnerDeathStarted);
+	if (HealthComponent)
+	{
+    	HealthComponent->OnDeathStarted.AddDynamic(this, &UItemDropComponent::OwnerDeathStarted);
+	}
 
 	CurrencySet = LyraAbilitySystemComponent->GetSet<ULyraCurrencySet>();
 	
@@ -41,11 +38,9 @@ void UItemDropComponent::InitializeWithAbilitySystem(ULyraAbilitySystemComponent
 
 void UItemDropComponent::OwnerDeathStarted(AActor* Owner)
 {
-	check(Owner);
-
-	DropItems();
 
 	DropCurrency();
+	DropItems();
 }
 
 
@@ -58,7 +53,20 @@ void UItemDropComponent::DropItems()
 
 void UItemDropComponent::DropCurrency()
 {
-	float GoldToDrop = CurrencySet->GetGoldToDrop();
 
+	//Spawn as much gold as GoldToDrop Attibute 
+
+	int GoldToDrop = CurrencySet->GetGoldToDrop();
+
+	FVector SpawnLocation = GetOwner()->GetActorLocation();
+
+	FActorSpawnParameters GoldSpawnParamaters;
+
+	GoldSpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+
+	for (int i = 0; i < GoldToDrop; i++)
+	{
+		GetWorld()->SpawnActor<AActor>(GoldToSpawn, SpawnLocation, FRotator(ForceInitToZero), GoldSpawnParamaters);
+	}
 }
 

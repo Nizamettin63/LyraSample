@@ -22,16 +22,23 @@ class LYRAGAME_API UItemDropComponent : public UGameFrameworkComponent
 
 private:
 
+
 	UItemDropComponent(const FObjectInitializer& ObjectInitializer);
 
-
-	void InitializeWithAbilitySystem(ULyraAbilitySystemComponent* ASC);
-
+	UFUNCTION()
 	void DropItems();
+
+	UFUNCTION()
 	void DropCurrency();
 
+public:
+
+	UFUNCTION()
 	void OwnerDeathStarted(AActor* Owner);
 
+
+	UFUNCTION()
+	void InitializeWithAbilitySystem(ULyraAbilitySystemComponent* ASC);
 
 protected:
 
@@ -39,6 +46,8 @@ protected:
 	TObjectPtr<ULyraAbilitySystemComponent> LyraAbilitySystemComponent;
 
 
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Lyra|Currency ")
+	TSubclassOf<AActor> GoldToSpawn;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	ULyraHealthComponent* HealthComponent;

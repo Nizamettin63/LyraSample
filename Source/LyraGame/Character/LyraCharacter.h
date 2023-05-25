@@ -155,7 +155,7 @@ private:
 	TObjectPtr<ULyraHealthComponent> HealthComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<ULyraHealthComponent> ItemDropComponent;
+	TObjectPtr<UItemDropComponent> ItemDropComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraCameraComponent> CameraComponent;
