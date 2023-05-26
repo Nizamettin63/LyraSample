@@ -33,6 +33,8 @@ protected:
 	UFUNCTION()
 		void OnRep_GoldToDrop(const FGameplayAttributeData& OldValue);
 
+	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
+
 private:
 
 	// The base amount of damage to apply in the damage execution.
