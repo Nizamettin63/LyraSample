@@ -24,7 +24,7 @@ UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_Lyra_Elimination_Message, "Lyra.PickupGold.Mes
 ULyraCurrencySet::ULyraCurrencySet()
 {
 	TotalGold = 0;
-	GoldToDrop = 3;
+	GoldToDrop = 1;
 }
 
 
