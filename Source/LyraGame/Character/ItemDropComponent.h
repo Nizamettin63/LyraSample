@@ -31,10 +31,11 @@ private:
 	UFUNCTION()
 	void DropCurrency();
 
-public:
-
 	UFUNCTION()
-	void OwnerDeathStarted(AActor* Owner);
+		void OwnerDeathStarted(AActor* Owner);
+
+
+public:
 
 
 	UFUNCTION()

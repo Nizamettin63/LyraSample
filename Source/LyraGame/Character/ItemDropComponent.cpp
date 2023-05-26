@@ -21,6 +21,7 @@ UItemDropComponent::UItemDropComponent(const FObjectInitializer& ObjectInitializ
 
 void UItemDropComponent::InitializeWithAbilitySystem(ULyraAbilitySystemComponent* ASC)
 {
+
 	if (ASC)
 	{
 		LyraAbilitySystemComponent = ASC;
@@ -53,20 +54,23 @@ void UItemDropComponent::DropItems()
 
 void UItemDropComponent::DropCurrency()
 {
-
-	//Spawn as much gold as GoldToDrop Attibute 
-
-	int GoldToDrop = CurrencySet->GetGoldToDrop();
-
-	FVector SpawnLocation = GetOwner()->GetActorLocation();
-
-	FActorSpawnParameters GoldSpawnParamaters;
-
-	GoldSpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
-
-	for (int i = 0; i < GoldToDrop; i++)
+	if (HasAuthority())
 	{
-		GetWorld()->SpawnActor<AActor>(GoldToSpawn, SpawnLocation, FRotator(ForceInitToZero), GoldSpawnParamaters);
+		//Spawn as much gold as GoldToDrop Attibute 
+
+		int GoldToDrop = CurrencySet->GetGoldToDrop();
+
+		FVector SpawnLocation = GetOwner()->GetActorLocation();
+
+		FActorSpawnParameters GoldSpawnParamaters;
+
+		GoldSpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+
+		for (int i = 0; i < GoldToDrop; i++)
+		{
+			GetWorld()->SpawnActor<AActor>(GoldToSpawn, SpawnLocation, FRotator(ForceInitToZero), GoldSpawnParamaters);
+		}
 	}
 }
+
 

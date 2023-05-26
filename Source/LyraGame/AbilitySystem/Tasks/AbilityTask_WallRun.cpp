@@ -102,19 +102,14 @@ bool UAbilityTask_WallRun::FindRunnableWall(FHitResult& OnWallHit)
 
 	FHitResult TraceHit;
 
-	/*static const auto CVar = IConsoleManager::Get().FindConsoleVariable(TEXT("ShowDebugTraversal"));
-	const bool bShowTraversal = CVar->GetInt() > 0;
-	*/
-	EDrawDebugTrace::Type DrawDebugType = EDrawDebugTrace::ForDuration;  // bShowTraversal ? EDrawDebugTrace::ForDuration : EDrawDebugTrace::None;
-
 	if (UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(), CharacterLocation, CharacterLocation + ForwardVector * TraceLenght,
-		WallRun_TraceObjectTypes, true, ActorsToIgnore, DrawDebugType, TraceHit, true))
+		WallRun_TraceObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, TraceHit, true))
 	{
 		return false;
 	}
 
 	if (UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(), CharacterLocation, CharacterLocation + -RightVector * TraceLenght,
-		WallRun_TraceObjectTypes, true, ActorsToIgnore, DrawDebugType, OnWallHit, true))
+		WallRun_TraceObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, OnWallHit, true))
 	{
 		if (FVector::DotProduct(OnWallHit.ImpactNormal, RightVector) > 0.3f)
 		{
@@ -123,7 +118,7 @@ bool UAbilityTask_WallRun::FindRunnableWall(FHitResult& OnWallHit)
 	}
 
 	if (UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(), CharacterLocation, CharacterLocation + RightVector * TraceLenght,
-		WallRun_TraceObjectTypes, true, ActorsToIgnore, DrawDebugType, OnWallHit, true))
+		WallRun_TraceObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, OnWallHit, true))
 	{
 		if (FVector::DotProduct(OnWallHit.ImpactNormal, -RightVector) > 0.3f)
 		{

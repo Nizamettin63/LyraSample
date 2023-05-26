@@ -143,6 +143,7 @@ void ULyraDamageExecution::Execute_Implementation(const FGameplayEffectCustomExe
 		// Apply a damage modifier, this gets turned into - health on the target
 		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(ULyraHealthSet::GetDamageAttribute(), EGameplayModOp::Additive, DamageDone));
 	}
+
 #endif // #if WITH_SERVER_CODE
 }
 
